@@ -1,0 +1,17 @@
+type: AmqpCliConfig
+spec:
+    connection: 
+      container: "amqps://my-namespace.servicebus.windows.net"
+      authentication:
+        type: ConnSASLPlain
+        username: access-key-name
+        password: access-key
+    sessions:
+    - links:
+      - role: sender
+        target: "myqueue"
+      - role: receiver
+        initialCredit: 10
+        source: "myqueue"
+
+      

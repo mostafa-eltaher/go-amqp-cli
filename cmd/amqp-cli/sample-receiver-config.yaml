@@ -8,8 +8,6 @@ spec:
         password: password
     sessions:
     - links:
-      - role: sender
-        target: "myqueue"
       - role: receiver
         initialCredit: 10
         source: "myqueue"

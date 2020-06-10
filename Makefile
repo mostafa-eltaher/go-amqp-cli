@@ -27,5 +27,6 @@ clean:
 
 .PHONY: sync
 sync:
-	scp ${BINARY}/*-linux-amd64 localvm:/home/mostafa/projects/enmasse/enmasse-0.31.2/go-amqp-cli
-	scp cmd/amqp-cli/*.yaml localvm:/home/mostafa/projects/enmasse/enmasse-0.31.2/go-amqp-cli
+	scp ${BINARY}/*-linux-amd64 localvm:/home/mostafa/projects/go-amqp-cli
+	scp cmd/amqp-cli/*.yaml localvm:/home/mostafa/projects/go-amqp-cli
+	ssh localvm ln -s /home/mostafa/projects/go-amqp-cli/${APP}-v${VERSION}-linux-amd64 /home/mostafa/projects/go-amqp-cli/go-amqp-cli

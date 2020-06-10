@@ -1,2 +1,2 @@
 # go-amqp-cli
-Simple AMQP CLI built by Go language
+Simple AMQP 1.0 CLI built by Golang
